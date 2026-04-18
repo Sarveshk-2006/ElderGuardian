@@ -1,50 +1,83 @@
-# Welcome to your Expo app 👋
+# 🛡️ ElderGuardian: Smart Emergency Response System
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**A Hybrid AI-Powered Protection Suite for the Elderly.**
 
-## Get started
+ElderGuardian is a next-generation safety ecosystem designed to protect senior citizens from silent emergencies. It combines advanced mobile AI, physics-based fall detection, and resilient hardware to ensure that help is dispatched even in zero-connectivity "black zones."
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🚀 Key Features
 
-2. Start the app
+### 🏥 Medical & Safety Dashboard
+*   **Real-Time Monitoring**: Pulsing biometrics and system health status.
+*   **Vitals AI Scanner**: Camera-based AI analysis for remote heart rate estimation and trauma detection (Bleeding/Pale Skin).
+*   **Medicine Scheduler**: Interactive daily prescription planner to ensure high health adherence.
+*   **Analytics Hub**: Safety scores and weekly mobility trends for family oversight.
 
-   ```bash
-   npx expo start
-   ```
+### 🚨 Emergency Intelligence (A1-C3 Matrix)
+The system uses a sophisticated **Connectivity-Severity Matrix** to determine the best response:
+*   **Tier 1 (Red)**: Severe falls – immediate automated SMS + 10-second proof-of-life audio recording.
+*   **Tier 2 (Yellow)**: Shakes/Minor impacts – "Are you okay?" prompt before dispatch.
+*   **Tier 3 (Green)**: System self-logs for daily mobility tracking.
 
-In the output, you'll find options to open the app in a
+### 📍 Intelligent Navigation
+*   **Data Science Lab Specialized Training**: The emergency navigation logic is fine-tuned for high-accuracy dispatch within our **Data Science (DS) Lab** environment, ensuring responders find the exact wing/room in record time.
+*   **Nearby Rescue**: One-tap navigation to the nearest critical-care hospitals with specialized tags (Emergency 24/7 / ICU).
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📡 Hardware Integration (Hybrid Resilience)
+For scenarios where mobile connectivity is unavailable or the phone is out of reach, our custom hardware module takes over:
 
-## Get a fresh project
+| Component | Function |
+| :--- | :--- |
+| **ESP32 Microcontroller** | The "Brain" – handles local data processing and low-power communication. |
+| **MPU6050 (IMU)** | High-precision 6-axis accelerometer/gyroscope for secondary fall detection. |
+| **GPS Neo6M** | Satellite-based positioning to provide coordinates in "offline" zones. |
+| **Relay Module** | Triggering physical alarms or emergency lighting within the home. |
 
-When you're ready, run:
+---
 
+## 💻 Tech Stack
+*   **Frontend**: React Native (Expo) with custom-built premium UI components.
+*   **Backend**: Node.js & Express API with MySQL database for secure history logging.
+*   **AI Engine**: Medical triage and image processing (Simulated via local logic and Camera Stream).
+*   **Navigation**: Google Maps API with Data Science Lab specific coordinate training.
+
+---
+
+## 🛠️ Installation & Setup
+
+### Prerequisites
+*   Node.js (v18+)
+*   Android Studio (for local builds)
+*   Java JDK 17+ (Set `JAVA_HOME` to your Android Studio `jbr` folder)
+
+### 1. Backend Setup
 ```bash
-npm run reset-project
+cd backend
+npm install
+npm start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Frontend Setup
+```bash
+# Install dependencies
+npm install
 
-## Learn more
+# Start development server
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Generate APK
+```powershell
+cd android
+./gradlew assembleDebug
+```
+*Locate the APK at: `android/app/build/outputs/apk/debug/app-debug.apk`*
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🏆 Techathon Project
+*Built with ❤️ for the technological advancement of elderly safety.*
+**Location Data Trained @ Data Science Lab**
